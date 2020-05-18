@@ -27,7 +27,12 @@
     Create an array that contains 4 people objects.
     Each object must have at least 2 properties.
 */
-
+console.clear();
+const person1 = { firstName: 'Kirill', lastName: 'Barsukov' };
+const person2 = { firstName: 'Elias', lastName: 'Yambay' };
+const person3 = { firstName: 'Mark', lastName: 'Twain' };
+const person4 = { firstName: 'Agatha', lastName: 'Christie' };
+const peopleArr = [person1, person2, person3, person4];
 
 /*
   Step 2 (6 points):
@@ -37,11 +42,14 @@
     template utilizing the properties you
     destructured.
 */
-
-
+const arrowFunction = ({ firstName, lastName }) =>
+  console.log(`Hello! My full name is ${firstName} ${lastName}.`);
 /*
   Step 3 (3 points):
     Loop over your array using a for/of loop.
     Call your arrow function passing the array item
     as an argument.
 */
+for (let object of peopleArr) {
+  arrowFunction(object);
+}
